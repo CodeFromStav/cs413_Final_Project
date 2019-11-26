@@ -80,9 +80,9 @@ function movePlayer() {
 }
 
 
-/*Collision Detection & monster following player movement
+//Collision Detection & monster following player movement
 
-*function collisionDetection(first, second) {
+function collisionDetection(first, second) {
   var firstBounds = first.getBounds();
   var secondBounds = second.getBounds();
 
@@ -92,7 +92,7 @@ function movePlayer() {
       && firstBounds.y < secondBounds.y + secondBounds.height;
 }
 
-var enemySpeed = 1.5;
+var enemyProjectileSpeed = 1.5;
 
 // Function: moveEnemy()
 // Desc: Move enemy slightly closer to the player
@@ -101,22 +101,45 @@ function moveEnemy() {
 
   // move the enemy right
   if(enemy.position.x < player.position.x) {
-    enemy.position.x = enemy.position.x + 1 * enemySpeed;
+    enemy.position.x = enemy.position.x + 1 * enemyProjectileSpeed;
   }
   // move the enemy left
   else if(enemy.position.x > player.position.x) {
-    enemy.position.x = enemy.position.x - 1 * enemySpeed;
+    enemy.position.x = enemy.position.x - 1 * enemyProjectileSpeed;
   }
   // move the enemy down
   if(enemy.position.y < player.position.y) {
-    enemy.position.y = enemy.position.y + 1 * enemySpeed;
+    enemy.position.y = enemy.position.y + 1 * enemyProjectileSpeed;
   }
   // move the enemy up
   else if(enemy.position.y > player.position.y) {
-    enemy.position.y = enemy.position.y - 1 * enemySpeed;
+    enemy.position.y = enemy.position.y - 1 * enemyProjectileSpeed;
   }
 } 
-*/
+
+
+
+// Check if enemy hit the player, if so game over. Change enemy speed
+//@param {
+  // Function: checkForEnemyHit(first, second)
+// Desc: Check for a collision between the player and the enemy
+function checkForEnemyHit(first, second)
+{
+  if(collisionDetection(first, second))
+  {
+    stageID = END_SCREEN;
+    deathSound.play();
+    endGame();
+  }
+}
+
+// Function: incrementEnemySpeed()
+// Desc: Increases the enemy speed by 0.1
+function incrementEnemySpeed() {
+  if(enemySpeed <= 2) {
+    enemySpeed = enemySpeed + 0.1;
+  }
+}}  
 
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
