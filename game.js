@@ -62,19 +62,19 @@ function gameloop() {
 // movePlayer function makes smoother movement
 function movePlayer() {
         // top wall
-      if(playerUp && player.position.y > 64) {
+      if(playerUp && player.position.y > 112) {
           player.position.y -= 2;
       }
         // bottom wall
-      if(playerDown && player.position.y < 656) {
+      if(playerDown && player.position.y < 1136) {
           player.position.y += 2;
       }
         // left wall
-      if(playerLeft && player.position.x > 64) {
+      if(playerLeft && player.position.x > 112) {
           player.position.x -= 2;
       }
         // right wall
-      if(playerRight && player.position.x < 656) {
+      if(playerRight && player.position.x < 1136) {
           player.position.x += 2;
       }
 }
