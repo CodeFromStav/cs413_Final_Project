@@ -127,7 +127,7 @@ function checkForEnemyHit(first, second)
 {
   if(collisionDetection(first, second))
   {
-    stageID = END_SCREEN;
+    stage = END_SCREEN;
     deathSound.play();
     endGame();
   }
@@ -135,11 +135,13 @@ function checkForEnemyHit(first, second)
 
 // Function: incrementEnemySpeed()
 // Desc: Increases the enemy speed by 0.1
-function incrementEnemySpeed() {
-  if(enemySpeed <= 2) {
+function incrementEnemySpeed()
+{
+  if(enemySpeed <= 2)
+  {
     enemySpeed = enemySpeed + 0.1;
   }
-}}  
+}  
 
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
