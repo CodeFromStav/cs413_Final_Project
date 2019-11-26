@@ -79,6 +79,45 @@ function movePlayer() {
       }
 }
 
+
+/*Collision Detection & monster following player movement
+
+*function collisionDetection(first, second) {
+  var firstBounds = first.getBounds();
+  var secondBounds = second.getBounds();
+
+  return firstBounds.x + firstBounds.width > secondBounds.x
+      && firstBounds.x < secondBounds.x + secondBounds.width 
+      && firstBounds.y + firstBounds.height > secondBounds.y
+      && firstBounds.y < secondBounds.y + secondBounds.height;
+}
+
+var enemySpeed = 1.5;
+
+// Function: moveEnemy()
+// Desc: Move enemy slightly closer to the player
+function moveEnemy() {
+  enemy.rotation -= 0.02;
+
+  // move the enemy right
+  if(enemy.position.x < player.position.x) {
+    enemy.position.x = enemy.position.x + 1 * enemySpeed;
+  }
+  // move the enemy left
+  else if(enemy.position.x > player.position.x) {
+    enemy.position.x = enemy.position.x - 1 * enemySpeed;
+  }
+  // move the enemy down
+  if(enemy.position.y < player.position.y) {
+    enemy.position.y = enemy.position.y + 1 * enemySpeed;
+  }
+  // move the enemy up
+  else if(enemy.position.y > player.position.y) {
+    enemy.position.y = enemy.position.y - 1 * enemySpeed;
+  }
+} 
+*/
+
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
     // key movement for player up, down, left, right
