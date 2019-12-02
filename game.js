@@ -23,11 +23,11 @@ stage.addChild(start_screen);
 
 //background for start
 var start_screen_bg = new PIXI.Sprite(
-  PIXI.Texture.fromImage("title_screen.png") );
+  PIXI.Texture.fromImage("../png/title_screen.png") );
 
 //button to enter game
 var start_screen_button = new PIXI.Sprite(
-  PIXI.Texture.fromImage("play_button.png") );
+  PIXI.Texture.fromImage("../png/play_button.png") );
 
 //add start button to start
 start_screen_bg.addChild(start_screen_button);
@@ -120,7 +120,6 @@ function collisionDetection(first, second) {
 }
 
 
-
 // Check if enemy hit the player, if so game over. Change enemy speed
 //@param {
   // Function: checkForEnemyHit(first, second)
@@ -161,6 +160,7 @@ treasureScoreText = new PIXI.Text("Treasures: " + treasure_Score, gameScoreStyle
 treasureScoreText.position.x = 30;
 treasureScoreText.position.y = 30;
 
+//Increases score by one each time Astro finds treasure
 function updateScore()
 {
   
@@ -178,8 +178,7 @@ function updateScore()
 
 
 
-// Function: updateScore()
-// Desc: Increase the score by one and display to player
+
 
 
 // keydown handler booleans for button presses for moving player
@@ -223,19 +222,19 @@ PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
 
 PIXI.loader
   .add('map_json', 'map.json')
-  .add('map', 'map.png')
+  .add('map', '../png/map.png')
   .add('assets.json')
   .load(ready);
 
 function ready() {
   var tu = new TileUtilities(PIXI);
-  world = tu.makeTiledWorld("map_json", "map.png");
+  world = tu.makeTiledWorld("map_json", "../png/map.png");
 
   // create frames for character sprite
   var frames = [];
   for( var i = 1; i <=3; i++)
   {
-    frames.push(PIXI.Texture.fromFrame("astro" + i + ".png"));
+    frames.push(PIXI.Texture.fromFrame("../move_down_animation/astro" + i + ".png"));
   }
 
   player = new PIXI.extras.MovieClip(frames);
