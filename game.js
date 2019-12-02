@@ -1,4 +1,4 @@
-var GAME_WIDTH = 720;
+vvar GAME_WIDTH = 720;
 var GAME_HEIGHT = 400;
 var GAME_SCALE = 2.25;
 // var HORIZON_Y = GAME_HEIGHT/GAME_SCALE/2;
@@ -237,7 +237,7 @@ function ready() {
   var frames = [];
   for( var i = 1; i <=3; i++)
   {
-    frames.push(PIXI.Texture.fromFrame("Astro_left-" + i + ".png"));
+    frames.push(PIXI.Texture.fromFrame("astro" + i + ".png"));
   }
 
   player = new PIXI.extras.MovieClip(frames);
