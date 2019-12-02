@@ -237,7 +237,7 @@ function ready() {
   var frames = [];
   for( var i = 1; i <=3; i++)
   {
-    frames.push(PIXI.Texture.fromFrame("astro" + i + ".png"));
+    frames.push(PIXI.Texture.fromFrame("Astro_left-" + i + ".png"));
   }
 
   player = new PIXI.extras.MovieClip(frames);
