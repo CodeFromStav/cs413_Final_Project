@@ -143,10 +143,15 @@ function incrementEnemySpeed()
   }
 }  
 
-score = 0;
+
+
+
+
 
 function itemCounter()
 {
+  score = 0;
+
   if( collisionDetenction(first,second))
   {
     score += 1
@@ -154,10 +159,15 @@ function itemCounter()
     if(score == 3)
     {
       stage = END_SCREEN;
+      cheerSound.play();
       endGame();
     }
   }
 }
+
+let treasure_score = new PIXI.Text("Treasures: " + player_hp,{fontFamily : 'Arial', fontSize: 30, fill : FFFFFF });
+stage.addChild(treasure_score);
+treasure_score.text = "Treasures: " + score;
 
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
