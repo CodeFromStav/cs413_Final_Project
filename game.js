@@ -80,17 +80,7 @@ function movePlayer() {
 }
 
 
-//Collision Detection & monster following player movement
 
-function collisionDetection(first, second) {
-  var firstBounds = first.getBounds();
-  var secondBounds = second.getBounds();
-
-  return firstBounds.x + firstBounds.width > secondBounds.x
-      && firstBounds.x < secondBounds.x + secondBounds.width 
-      && firstBounds.y + firstBounds.height > secondBounds.y
-      && firstBounds.y < secondBounds.y + secondBounds.height;
-}
 
 var enemyProjectileSpeed = 1.5;
 
@@ -116,6 +106,18 @@ function moveEnemy() {
     enemy.position.y = enemy.position.y - 1 * enemyProjectileSpeed;
   }
 } 
+
+//Collision Detection & monster following player movement
+
+function collisionDetection(first, second) {
+  var firstBounds = first.getBounds();
+  var secondBounds = second.getBounds();
+
+  return firstBounds.x + firstBounds.width > secondBounds.x
+      && firstBounds.x < secondBounds.x + secondBounds.width 
+      && firstBounds.y + firstBounds.height > secondBounds.y
+      && firstBounds.y < secondBounds.y + secondBounds.height;
+}
 
 
 
@@ -144,18 +146,19 @@ function incrementEnemySpeed()
 }  
 
 
+var treasure_Score = 0;
 
+treasureScoreText = new PIXI.Text("Treasures: " + treasure_Score, gameScoreStyle);
+treasureScoreText.position.x = 30;
+treasureScoreText.position.y = 30;
 
-
-
-function itemCounter()
+function updateScore()
 {
-  score = 0;
-
   if( collisionDetenction(first,second))
   {
     score += 1
-    
+    treasureScoreText.text = "Treasures: " + gameScore;
+
     if(score == 3)
     {
       stage = END_SCREEN;
@@ -165,9 +168,11 @@ function itemCounter()
   }
 }
 
-let treasure_score = new PIXI.Text("Treasures: " + player_hp,{fontFamily : 'Arial', fontSize: 30, fill : FFFFFF });
-stage.addChild(treasure_score);
-treasure_score.text = "Treasures: " + score;
+
+
+// Function: updateScore()
+// Desc: Increase the score by one and display to player
+
 
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
