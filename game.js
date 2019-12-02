@@ -133,11 +133,20 @@ function checkForEnemyHit(first, second)
     deathSound.play();
     endGame();
   }
+  incrementProjectileSpeed();
+}
+
+function checkForItemCollect(first, second)
+{
+  if ( collisionDetection( first, second) )
+  {
+    updateScore();
+  }
 }
 
 // Function: incrementEnemySpeed()
 // Desc: Increases the enemy speed by 0.1
-function incrementEnemySpeed()
+function incrementProjectileSpeed()
 {
   if(enemySpeed <= 2)
   {
@@ -154,8 +163,7 @@ treasureScoreText.position.y = 30;
 
 function updateScore()
 {
-  if( collisionDetenction(first,second))
-  {
+  
     score += 1
     treasureScoreText.text = "Treasures: " + gameScore;
 
@@ -165,7 +173,7 @@ function updateScore()
       cheerSound.play();
       endGame();
     }
-  }
+  
 }
 
 
