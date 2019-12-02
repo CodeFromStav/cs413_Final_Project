@@ -143,6 +143,22 @@ function incrementEnemySpeed()
   }
 }  
 
+score = 0;
+
+function itemCounter()
+{
+  if( collisionDetenction(first,second))
+  {
+    score += 1
+    
+    if(score == 3)
+    {
+      stage = END_SCREEN;
+      endGame();
+    }
+  }
+}
+
 // keydown handler booleans for button presses for moving player
 function keydownEventHandler(e) {
     // key movement for player up, down, left, right
