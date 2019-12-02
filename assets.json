@@ -1,44 +1,36 @@
 {"frames": {
 
-"Astro_left-1.png":
+"astro1.png":
 {
-	"frame": {"x":0,"y":0,"w":16,"h":16},
+	"frame": {"x":0,"y":0,"w":337,"h":337},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
-	"sourceSize": {"w":16,"h":16}
+	"spriteSourceSize": {"x":0,"y":0,"w":337,"h":337},
+	"sourceSize": {"w":337,"h":337}
 },
-"Astro_left-2.png":
+"astro2.png":
 {
-	"frame": {"x":16,"y":0,"w":16,"h":16},
+	"frame": {"x":337,"y":0,"w":337,"h":337},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
-	"sourceSize": {"w":16,"h":16}
+	"spriteSourceSize": {"x":0,"y":0,"w":337,"h":337},
+	"sourceSize": {"w":337,"h":337}
 },
-"Astro_left-3.png":
+"astro3.png":
 {
-	"frame": {"x":32,"y":0,"w":16,"h":16},
+	"frame": {"x":674,"y":0,"w":337,"h":337},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
-	"sourceSize": {"w":16,"h":16}
-},
-"Astro_left-4.png":
-{
-	"frame": {"x":48,"y":0,"w":16,"h":16},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
-	"sourceSize": {"w":16,"h":16}
+	"spriteSourceSize": {"x":0,"y":0,"w":337,"h":337},
+	"sourceSize": {"w":337,"h":337}
 }},
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "assets.png",
 	"format": "RGBA8888",
-	"size": {"w":64,"h":16},
+	"size": {"w":1011,"h":337},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:f34785b73ac38b0c7e255e644fa5a59f:ad90c96819991c03d3055f08f90faf0b:a759b6bbc8381ac9c472b28f589ad0d6$"
+	"smartupdate": "$TexturePacker:SmartUpdate:ce652f1a96b2d8a91521d38fd32c7f27:7afce5d1a33de99bcc7307fd41674eaa:a759b6bbc8381ac9c472b28f589ad0d6$"
 }
 }
